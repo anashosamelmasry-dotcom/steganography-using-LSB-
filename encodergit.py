@@ -28,3 +28,4 @@ elif choice == "2":
 else:
     print("Error Invalid choice")
     image_byte = None
+    successfully = False
