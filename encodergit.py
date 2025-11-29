@@ -27,3 +27,4 @@ elif choice == "2":
             message = None
 else:
     print("Error Invalid choice")
+    image_byte = None
