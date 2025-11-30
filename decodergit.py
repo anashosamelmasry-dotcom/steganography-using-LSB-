@@ -13,3 +13,17 @@ try:
 except:
     print("Error Can't read the file")
     exit()
+bits = ""
+for byte in image_byte:
+    bits += str(byte % 2)
+message = ""
+for i in range(0, len(bits), 8):
+    byte_ch = bits[i:i+8]
+    if len(byte_ch) < 8:
+        break
+    character = chr(int(byte_ch, 2))
+    message += character
+    if ")))))" in message:
+        break
+message = message.replace(")))))", "")
+print(message) 
